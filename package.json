@@ -1,0 +1,14 @@
+{
+  "name": "@hotcakes/release-config",
+  "version": "0.0.0-semantically-released",
+  "description": "",
+	"exports": "./release.config.js",
+	"peerDependencies": {
+		"semantic-release": "24.x"
+	},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
