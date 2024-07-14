@@ -7,4 +7,6 @@ on:
 jobs:
   publish:
     uses: crealgo/hotcakes-ci/.github/workflows/semantic-release.yaml@main
-    secrets: inherit
+    with:
+      npm-token: ${{ secrets.CREALGO_NPM_TOKEN }}
+      github-token: ${{ github.token }}
