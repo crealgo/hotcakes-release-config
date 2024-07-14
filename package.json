@@ -1,6 +1,9 @@
 {
   "name": "@hotcakes/release-config",
   "version": "0.0.0-semantically-released",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "",
 	"exports": "./release.config.js",
 	"peerDependencies": {
