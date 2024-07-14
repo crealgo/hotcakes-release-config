@@ -1,39 +1,9 @@
 name: Publish Packages
 
 on:
-  workflow_dispatch:
-    inputs:
-      package:
-        type: choice
-        description: Release Package
-        options:
-          - react-ui-portfolio
-          - rehype-table-of-contents
   push:
-    branches:
-      - main
-      - next
-
-env:
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  GITHUB_TOKEN: ${{ github.token }}
+    branches: [main, next]
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-          cache: npm
-
-      - name: Install Packages
-        run: npm clean-install
-
-      - name: Publish Packages
-        working-directory: packages/${{ github.event.inputs.package }}
-        run: npx semantic-release --dry-run --no-ci
+    uses: crealgo/hotcakes-ci/workflows/semantic-release.yaml@main
