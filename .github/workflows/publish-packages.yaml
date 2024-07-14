@@ -1,4 +1,4 @@
-name: Publish Packages
+name: Publish Package
 
 on:
   push:
@@ -6,4 +6,4 @@ on:
 
 jobs:
   publish:
-    uses: crealgo/hotcakes-ci/workflows/semantic-release.yaml@main
+    uses: crealgo/hotcakes-ci/.github/workflows/semantic-release.yaml@main
