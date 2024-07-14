@@ -8,6 +8,6 @@ module.exports = {
 			name: 'stable',
 			channel: 'stable',
 		},
-	],
+	]
 };
 
