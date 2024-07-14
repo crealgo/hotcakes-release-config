@@ -9,9 +9,5 @@ module.exports = {
 			channel: 'stable',
 		},
 	],
-	dryRun: true,
-	ci: false,
-	prepare: '@semantic-release/npm',
-	publish: '@semantic-release/npm',
 };
 
