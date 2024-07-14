@@ -7,3 +7,4 @@ on:
 jobs:
   publish:
     uses: crealgo/hotcakes-ci/.github/workflows/semantic-release.yaml@main
+    secrets: inherit
