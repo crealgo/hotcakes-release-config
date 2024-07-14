@@ -9,9 +9,6 @@ on:
       NPM_TOKEN:
         description: The NPM token used for deploying the npm registry.
         required: true
-      GITHUB_TOKEN:
-        description: The GitHub token provided during a workflow run. Nothing special.
-        required: true
 
 jobs:
   hotcakes-semantic-release:
