@@ -4,13 +4,10 @@ on:
   push:
     branches: [main, next]
 
-env:
-  npm-token: ${{ secrets.CREALGO_NPM_TOKEN }}
-  github-token: ${{ secrets.CREALGO_GITHUB_TOKEN }}
-
 jobs:
   publish:
+
     uses: crealgo/hotcakes-ci/.github/workflows/semantic-release.yaml@main
-    with:
-      npm-token: ${{ github.env.npm-token }}
-      github-token: ${{ github.env.github-token }}
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.CREALGO_GITHUB_TOKEN }}
+      NPM_TOKEN: ${{ secrets.CREALGO_NPM_TOKEN }}
